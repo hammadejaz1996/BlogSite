@@ -1,0 +1,31 @@
+.blog-card {
+  width: 500px;
+  height: 450px;
+  /* margin-left: 200px; */
+  /* margin-top: 40px; */
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.text-area {
+  height: 150px;
+}
+.save-button {
+  width: 200px;
+  float: right;
+}
+
+.blog-heading {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}

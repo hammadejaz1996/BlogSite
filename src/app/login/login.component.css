@@ -1,0 +1,29 @@
+.login-section-header {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 150px;
+}
+.login-card {
+  width: 500px;
+  height: 250px;
+  margin-left: 500px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  padding-top: 20px;
+}
+.login-button {
+  width: 200px;
+  float: right;
+}
+.forgot-login {
+  font-weight: bold;
+  font-size: medium;
+}
+

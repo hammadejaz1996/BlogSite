@@ -1,0 +1,18 @@
+<h1 class="blog-heading">{{blogTitle}}</h1>
+<mat-card class="blog-card">
+  <form [formGroup]="blogForm" (ngSubmit)="onSave()" class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Title</mat-label>
+      <input type="text" matInput formControlName = "title" placeholder="title" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Subtitle</mat-label>
+      <input type="text" matInput formControlName = "subtitle" placeholder="subtitle" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Write Blog</mat-label>
+      <textarea class="text-area" matInput formControlName = "paragraph" placeholder="Write Something"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="save-button">Save</button>
+  </form>
+</mat-card>
