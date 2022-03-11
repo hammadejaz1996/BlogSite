@@ -5,6 +5,7 @@
     <span #Login class="toolbar-span" (click)="selectedHeader(Login)">Login</span>
     <span #Blogs class="toolbar-span" (click)="selectedHeader(Blogs)">Blogs</span>
     <span #About class="toolbar-span" (click)="selectedHeader(About)">About</span>
+    <span #Signup class="toolbar-span" (click)="selectedHeader(Signup)">Signup</span>
     <span #CreateBlog class="toolbar-span create-blog-button"
       *ngIf="name.length > 0"
       (click)="selectedHeader(CreateBlog); openDialog()"
@@ -12,11 +13,12 @@
     <span #Name class="toolbar-span" (click)="selectedHeader(Name)">{{name}}</span>
   </mat-toolbar>
 </header>
+<!-- <router-outlet></router-outlet> -->
 <app-home *ngIf="headerSelected === 'Home'"></app-home>
 <app-login (output) = "GetOutputFromChild($event)" *ngIf="headerSelected === 'Login'"></app-login>
 <app-blogs
   *ngIf="headerSelected === 'Blogs'"
-  [newBlog]="blog"
   ></app-blogs>
 <app-about-us *ngIf="headerSelected === 'About'"></app-about-us>
+<app-signup *ngIf="headerSelected === 'Signup'"></app-signup>
 <!-- <app-create-blog *ngIf="headerSelected === 'Create Blog'" (outputBlog)="GetBlog($event)"></app-create-blog> -->

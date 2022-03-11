@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { blog } from '../model/blog';
+import { BlogService } from '../services/blog.service';
 import { CreateBlogComponent } from './create-blog/create-blog.component';
 
 @Component({
@@ -7,84 +9,60 @@ import { CreateBlogComponent } from './create-blog/create-blog.component';
   templateUrl: './blogs.component.html',
   styleUrls: ['./blogs.component.css']
 })
+
 export class BlogsComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  blogs : blog[] = [];
+
+  constructor(public dialog: MatDialog, private blogService : BlogService ) {
+    this.getAllBlogs();
+    this.blogService.getBlogById(1);
+    this.blogService.blogEmitter.subscribe(result => {
+      this.blogs = result;
+    });
+   }
 
   ngOnInit(): void {
+
   }
 
-  @Input('newBlog') set setNewBlog(blog : any) {
-    debugger
-    if (blog === null || blog === undefined) {
-      return;
-    }
-    console.log(blog);
-    this.blogs.push(blog);
-  }
+  // @Input('newBlog') set setNewBlog(blog : any) {
+  //   debugger
+  //   if (blog === null || blog === undefined) {
+  //     return;
+  //   }
+  //   console.log(blog);
+  //   this.blogs.push(blog);
+  // }
 
   editBlog(index : number) {
-    const dialogRef = this.dialog.open(CreateBlogComponent,{data : {title : this.blogs[index].title, subtitle : this.blogs[index].subtitle, paragraph : this.blogs[index].paragraph, blogTitle : 'Edit Blog'}});
-    dialogRef.componentInstance.outputBlog.subscribe(result => {
-      let blog = {
-        title : result.title,
-        subtitle : result.subtitle,
-        paragraph : result.paragraph,
-        avatar : result.avatar,
-        image : result.image,
-        alternateImage : result.alternateImage
-      };
-      this.blogs[index] = blog;
+    const dialogRef = this.dialog.open(CreateBlogComponent,{data : {id : this.blogs[index].id,title : this.blogs[index].title, subtitle : this.blogs[index].subtitle, paragraph : this.blogs[index].paragraph, blogTitle : 'Edit Blog'}});
+    // dialogRef.componentInstance.outputBlog.subscribe(result => {
+    //   let blog = {
+    //     id : result.id,
+    //     title : result.title,
+    //     subtitle : result.subtitle,
+    //     paragraph : result.paragraph,
+    //     avatar : result.avatar,
+    //     image : result.image,
+    //     alternateImage : result.alternateImage
+    //   };
+    //   this.blogs[index] = blog;
+    // });
+  }
+
+  getAllBlogs() {
+    this.blogService.getAllBlogs();
+    this.blogService.blogEmitter.subscribe(result => {
+      this.blogs = result;
     });
   }
-  blogs = [
-    {
-      avatar : "assets/test.jpg",
-      title : "hammad",
-      subtitle : "Hammad Ejaz",
-      image : "assets/test.jpg",
-      paragraph :"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      alternateImage : "test.jpg"
-    },
-    {
-      avatar : "assets/test.jpg",
-      title : "hammad",
-      subtitle : "Hammad Ejaz",
-      image : "assets/test.jpg",
-      paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      alternateImage : "test.jpg"
-    },
-    {
-      avatar : "assets/test.jpg",
-      title : "hammad",
-      subtitle : "Hammad Ejaz",
-      image : "assets/test.jpg",
-      paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      alternateImage : "test.jpg"
-    },
-    {
-      avatar : "assets/test.jpg",
-      title : "hammad",
-      subtitle : "Hammad Ejaz",
-      image : "assets/test.jpg",
-      paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      alternateImage : "test.jpg"
-    },
-    {
-      avatar : "assets/test.jpg",
-      title : "hammad",
-      subtitle : "Hammad Ejaz",
-      image : "assets/test.jpg",
-      paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      alternateImage : "test.jpg"
-    },
-    {
-      avatar : "assets/test.jpg",
-      title : "hammad",
-      subtitle : "Hammad Ejaz",
-      image : "assets/test.jpg",
-      paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      alternateImage : "test.jpg"
-    }
-  ]
+
+  getBlogById(id : number) {
+
+  }
+
+  deleteBlog(id : number) {
+    this.blogService.deleteBlog(id);
+  }
 }

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { blog } from 'src/app/model/blog';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-create-blog',
@@ -17,7 +18,7 @@ export class CreateBlogComponent implements OnInit {
   blog : blog ;
   blogTitle : string = "Create Blog"
 
-  constructor( public dialogRef: MatDialogRef<CreateBlogComponent>,@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(private blogService : BlogService, public dialogRef: MatDialogRef<CreateBlogComponent>,@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
     this.blogForm = new FormGroup({
@@ -30,8 +31,9 @@ export class CreateBlogComponent implements OnInit {
 
   onSave() {
 
-    debugger
+    // debugger
     this.blog = {
+      id : this.data.id,
       avatar : "assets/test.jpg",
       image : "assets/test.jpg",
       alternateImage : "test.jpg",
@@ -39,8 +41,14 @@ export class CreateBlogComponent implements OnInit {
       subtitle : this.blogForm.value.subtitle,
       paragraph : this.blogForm.value.paragraph
     }
+    if(this.data.id !== undefined && this.data.id > 0) {
+      this.blogService.editBlog(this.data.id,this.blog);
+      this.dialogRef.close();
+      return;
+    }
     console.log(this.blog);
-    this.outputBlog.emit(this.blog);
+    this.blogService.addBlog(this.blog);
+    // this.outputBlog.emit(this.blog);
 
     console.log(this.blogForm.value.title);
     this.dialogRef.close();

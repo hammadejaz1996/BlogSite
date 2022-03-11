@@ -1,0 +1,132 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "hammad with attitude",
+      "subtitle": "Hammad Ejaz",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 3,
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "Zain Shamshad is a boy with so much rudeness",
+      "subtitle": "Hammad Ejaz",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 4,
+      "avatar": "assets/test.jpg",
+      "title": "hammad",
+      "subtitle": "Hammad Ejaz",
+      "image": "assets/test.jpg",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "alternateImage": "test.jpg"
+    },
+    {
+      "id": 5,
+      "avatar": "assets/test.jpg",
+      "title": "hammad",
+      "subtitle": "Hammad Ejaz",
+      "image": "assets/test.jpg",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "alternateImage": "test.jpg"
+    },
+    {
+      "id": 6,
+      "avatar": "assets/test.jpg",
+      "title": "hammad",
+      "subtitle": "Hammad Ejaz",
+      "image": "assets/test.jpg",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "alternateImage": "test.jpg"
+    },
+    {
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "New Blog",
+      "subtitle": "Very New Blog",
+      "paragraph": "Very Very new Blog",
+      "id": 7
+    },
+    {
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "hammad ejaz edited blog",
+      "subtitle": "Hammad Ejaz",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 8
+    },
+    {
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "hammad ejaz very new blog",
+      "subtitle": "Hammad Ejaz",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 9
+    },
+    {
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "hammad very new Blog",
+      "subtitle": "Hammad Ejaz",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "hammad ejaz newly edited blog verison 1",
+      "subtitle": "Hammad Ejaz",
+      "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "Mujeeb Rehman",
+      "subtitle": "alskdnlkjsandnsaljdsadn",
+      "paragraph": ";andlknsadlnsaldnlksan",
+      "id": 12
+    },
+    {
+      "avatar": "assets/test.jpg",
+      "image": "assets/test.jpg",
+      "alternateImage": "test.jpg",
+      "title": "behtreen title",
+      "subtitle": "behtreen subtitle",
+      "paragraph": "behtreen message body",
+      "id": 13
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "hammad@yahoo.com",
+      "password": "abcd@1234",
+      "name": "Hammad Ejaz"
+    },
+    {
+      "id": 2,
+      "email": "hammad@gmail.com",
+      "password": "abcd@1234",
+      "name": "Muhammad Hammad Ejaz"
+    },
+    {
+      "email": "m.ammar@yahoo.com",
+      "password": "abcd@1234",
+      "name": "Muhammad Ammar Ejaz",
+      "id": 3
+    }
+  ]
+}

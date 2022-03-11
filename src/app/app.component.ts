@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
     const dialogRef = this.dialog.open(CreateBlogComponent,{data : {title : '', subtitle : '', paragraph : '', blogTitle : 'Create Blog'}});
     dialogRef.componentInstance.outputBlog.subscribe(result => {
       this.blog = {
+        id : result.id,
         title : result.title,
         subtitle : result.subtitle,
         paragraph : result.paragraph,

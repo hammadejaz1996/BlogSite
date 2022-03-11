@@ -1,4 +1,5 @@
 export interface blog {
+  id : number,
   avatar : string,
   image : string,
   title : string,

@@ -3,7 +3,7 @@
   <form [formGroup]="blogForm" (ngSubmit)="onSave()" class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Title</mat-label>
-      <input type="text" matInput formControlName = "title" placeholder="title" value="">
+      <input type="text" matInput formControlName = "title" placeholder="title" required="true" value="">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Subtitle</mat-label>

@@ -16,6 +16,8 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CreateBlogComponent } from './blogs/create-blog/create-blog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SignupComponent } from './signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     BlogsComponent,
     AboutUsComponent,
-    CreateBlogComponent
+    CreateBlogComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

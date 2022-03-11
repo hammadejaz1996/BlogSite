@@ -1,0 +1,26 @@
+.signup-card {
+  width: 30%;
+  height: 42%;
+  margin : auto;
+  margin-top: 50px;
+}
+.signup-section-header {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 50px;
+}
+/* .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+} */
+
+.example-full-width {
+  width: 100%;
+  padding-top: 20px;
+}
+.signup-button {
+  width: 200px;
+  float: right;
+}
+

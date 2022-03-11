@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { User } from '../model/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -12,20 +14,11 @@ export class LoginComponent implements OnInit{
   count : number;
   result : string = '';
   @Output() output:EventEmitter<string>= new EventEmitter();
-  users = [
-    {
-      email : "hammad@yahoo.com",
-      password : "abcd@1234",
-      name : "Hammad Ejaz",
-    },
-    {
-      email : "hammad@gmail.com",
-      password : "abcd@1234",
-      name : "Muhammad Hammad Ejaz",
-    }
-  ]
+  users : User[];
 
-  constructor() {}
+  constructor(private userService : UserService) {
+    this.getAllUsers()
+  }
 
   ngOnInit(): void {
     this.profileForm = new FormGroup({
@@ -33,6 +26,13 @@ export class LoginComponent implements OnInit{
       password : new FormControl('')
     });
     this.count = 0;
+  }
+
+  getAllUsers() {
+    this.userService.getAllUsers();
+    this.userService.userEmitter.subscribe(x => {
+      this.users = x;
+    })
   }
 
   onSubmit() {
